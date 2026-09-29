@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Firebreathing Kittens Podcast</title>
+
 <style>
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -13,52 +14,209 @@ body {
     background: #fff;
     color: #111;
 }
+
 main {
     max-width: 900px;
     margin: auto;
     padding: 2rem 1.25rem;
 }
+
 h1,h2,h3 {
     line-height: 1.25;
 }
-h1 { margin-top:0; }
-h2 { margin-top:2rem; border-bottom: 1px solid #ddd; padding-bottom:0.25rem; }
-img { max-width: 100%; height:auto; display:block; margin:1rem auto; }
-ol, ul { margin-left: 1.5rem; }
-a { color: #0066cc; }
+
+h1 {
+    margin-top:0;
+}
+
+h2 {
+    margin-top:2rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom:0.25rem;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+    display:block;
+    margin:1rem auto;
+}
+
+ol, ul {
+    margin-left: 1.5rem;
+}
+
+a {
+    color: #0066cc;
+}
+
+
+/* ================================
+   CLICKABLE NAVIGATION
+   ================================ */
+
+#main-navigation {
+    margin: 2rem 0 3rem 0;
+}
+
+.nav-section {
+    margin: 0.75rem 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.nav-section > summary {
+    padding: 1rem 1.25rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style-position: inside;
+}
+
+.nav-section > summary:hover {
+    background: #f0f0f0;
+}
+
+.nav-subsection {
+    padding: 0.25rem 1.25rem 1rem 2.5rem;
+}
+
+.nav-subsection a {
+    display: block;
+    padding: 0.45rem 0;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.nav-subsection a:hover {
+    text-decoration: underline;
+}
+
+details.nav-subsection {
+    padding: 0;
+    margin: 0.25rem 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+details.nav-subsection > summary {
+    padding: 0.75rem 0;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0066cc;
+    list-style-position: inside;
+}
+
+details.nav-subsection > summary:hover {
+    text-decoration: underline;
+}
+
+.nav-subsection.nested {
+    padding-left: 2rem;
+    padding-bottom: 0.5rem;
+}
+
 </style>
 </head>
-<body>
+
+<body id="top">
 <main>
 
 <p>
-Welcome to the official website of Firebreathing Kittens Podcast! The following answers some questions frequently asked by new members. It is divided into sections to make it easier to look at.  </p>
+Welcome to the official website of Firebreathing Kittens Podcast! The following answers some questions frequently asked by new members. It is divided into sections to make it easier to look at.
+</p>
 
-<h2 id="top">Table of Contents</h2>
-<ol>
-<li><a href="#a1">Podcast Name</a></li>
-<li><a href="#a2">Theme</a></li>
-<li><a href="#a3">How Long We Have Been Playing</a></li>
-<li><a href="#a4">How do you “play”? (Roll20, Foundry, etc?)</a></li>
-<li><a href="#a5">Game Playtime Length</a></li>
-<li><a href="#a6">TTRPG Systems</a></li>
-<li><a href="#a7">Flavor vs Mechanics</a></li>
-<li><a href="#a8">Player-Character Level Progression</a></li>
-<li><a href="#a9">Scheduling</a></li>
-<li><a href="#a10">Example Game Calendar</a></li>
-<li><a href="#a11">Our Members Are Welcome to GM</a></li>
-<li><a href="#a12">Modules? Magazines? Where the stories come from</a></li>
-<li><a href="#a13">Standalone Plot and Long Form Storytelling</a></li>
-<li><a href="#a14">Example of How We Use Each Others' Non Player Characters</a></li>
-<li><a href="#a15">Safety System</a></li>
-<li><a href="#a16">NSFW (or SFW)</a></li>
-<li><a href="#a17">Accents</a></li>
-<li><a href="#a18">Improvisational Comedy (Improv)</a></li>
-<li><a href="#a19">How Long Do I Have to Decide If I Want To Play?</a></li>
-<li><a href="#a20">Duration</a></li>
-<li><a href="#a21">Equipment</a></li>
-<li><a href="#a22">How to Join</a></li>
-</ol>
+<nav id="main-navigation" aria-label="Main navigation">
+
+    <details class="nav-section">
+        <summary>Scheduling</summary>
+
+        <div class="nav-subsection">
+            <a href="#a5">Game Playtime Length</a>
+            <a href="#a9">Scheduling</a>
+            <a href="#a10">Example Game Calendar</a>
+            <a href="#a8">Player-Character Level Progression</a>
+            <a href="#a3">How Long We Have Been Playing</a>
+        </div>
+    </details>
+
+
+    <details class="nav-section">
+        <summary>Game Format</summary>
+
+        <details class="nav-subsection">
+            <summary>TTRPG Systems</summary>
+
+            <div class="nav-subsection nested">
+                <a href="#a6">TTRPG Systems</a>
+                <a href="#a7">Flavor vs Mechanics</a>
+                <a href="#a15">Safety System</a>
+            </div>
+        </details>
+
+        <details class="nav-subsection">
+            <summary>Rotation GMing</summary>
+
+            <div class="nav-subsection nested">
+                <a href="#a11">Our Members Are Welcome to GM</a>
+            </div>
+        </details>
+
+        <details class="nav-subsection">
+            <summary>Virtual Tabletop</summary>
+
+            <div class="nav-subsection nested">
+                <a href="#a4">How do you “play”? (Roll20, Foundry, etc visual combat maps?)</a>
+            </div>
+        </details>
+
+        <details class="nav-subsection">
+            <summary>The Campaign</summary>
+
+            <div class="nav-subsection nested">
+                <a href="#a12">Modules? Magazines? Where the stories come from</a>
+                <a href="#a13">Standalone Plot And Long Form Storytelling</a>
+                <a href="#a14">Example of how we use each others’ Non Player Characters (NPCs) in games:</a>
+            </div>
+        </details>
+
+    </details>
+
+
+    <details class="nav-section">
+        <summary>Podcasting</summary>
+
+        <div class="nav-subsection">
+            <a href="#a1">Podcast Name</a>
+            <a href="#a2">Theme</a>
+            <a href="#a16">NSFW (or SFW)</a>
+            <a href="#a18">Improvisational Comedy</a>
+            <a href="#a17">Accents</a>
+        </div>
+    </details>
+
+
+    <details class="nav-section">
+        <summary>Joining</summary>
+
+        <div class="nav-subsection">
+            <a href="#a19">How Long Do I Have to Decide If I Want To Play?</a>
+            <a href="#a20">Duration</a>
+            <a href="#a22">How to Join</a>
+        </div>
+    </details>
+
+
+    <details class="nav-section">
+        <summary>Equipment</summary>
+
+        <div class="nav-subsection">
+            <a href="#a21">Equipment</a>
+        </div>
+    </details>
+
+</nav>
+
 
 <h2 id="a1">1. Podcast Name</h2>
 <p>
@@ -404,7 +562,7 @@ We see each other as people interested in the same hobby who over time become li
 <p>
 Before talking about equipment, let’s talk about acceptance:  We will not reject you.  If you have equipment that meets our minimum requirements, we proceed to the next step in the joining process.  Sometimes people say, “I wouldn’t want to buy the equipment and then my application to join gets rejected.”  There is no rejection at any part in our joining process.  If a new member wants to play with us and meets our equipment requirement, we say, “Awesome welcome to the group, here’s the next step in the joining process.”
 </p>
-</p>So with that said, our minimum equipment requirement is:  </p>
+<p>So with that said, our minimum equipment requirement is:  </p>
 
 <ul>
     <li> a webcam so we can see each other as we play. The video isn’t released to the public, just our voices are. </li>
@@ -446,6 +604,7 @@ Before talking about equipment, let’s talk about acceptance:  We will not reje
 <p>     1) Over-ear headphones.  <a href="https://www.amazon.com/Headphones-Podcasts-Monitoring-Recording-Computer/dp/B085899TQ9">Amazon.com</a>   
 </p>
 <p> and either Option 1, Option 2, or Option 3 below.     </p>
+
 
   <li>
       <b>Option 1:</b>  A dynamic XLR mic with a 24 bit audio interface, an XLR cable, and an arm stand that comes with a nylon mesh pop filter. 
@@ -504,7 +663,7 @@ Before talking about equipment, let’s talk about acceptance:  We will not reje
 
 <b>Option 4:</b> Experimental.  Recently, there are now 24 bit lavalier microphones for sale that wire right in to a USB port (so there’s no risk of a battery running out mid game).  You’re welcome to try this if you’d like, but please also be prepared to get another mic if this doesn’t work.  It’s an experiment. If it does work, it’d be great for a twenty five dollar option to exist.
  <ol>
-     <li>Maono USB Lavalier Microphone, 192KHZ/24BIT Plug & Play Omnidirectional Lapel Shirt Collar Clip on Mic.     <a href="https://www.amazon.com/Microphone-MAONO-Omnidirectional-Microphone-Recording-Broadcasting/dp/B074BLM973">Amazon.com</a>      </ol></li>
+     <li>Maono USB Lavalier Microphone, 192KHZ/24BIT Plug & Play Omnidirectional Lapel Shirt Collar Clip on Mic.     <a href="https://www.amazon.com/Microphone-MAONO-Omnidirectional-Microphone-Recording-Broadcasting/dp/B074BLM973">Amazon.com</a>      </li>
 
 <p>I get asked this a lot: What audio setup do I use? </p>
 <p>I use a twenty dollar Behringer XM8500 dynamic mic and a twenty dollar Klark Teknik CM-1 mic activator (mic activators convert the phantom power of audio interfaces into usable voltage for dynamic microphones, letting your loud sounds get louder.  The Klark Teknik CM-1 adds additional gain without adding background noise, useful for the higher voltage requiring XM8500) on a twenty dollar floor microphone stand with an older generation Focusrite Scarlett Solo 24 bit audio interface.  The reason why the Behringer XM8500 is my mic of choice is because of its dramatic volume dropoff.  I opened up the software to get some numbers for you, and here they are.  Sounds that are four inches from the microphone are at -6 dB (very loud) with my mic activator.  Moving the Behringer XM8500 to two feet away reduced that very same sound to -24 dB (very quiet, very easy to noise gate out).  The eighteen decibel volume dropoff over two feet of distance is awesome. Other microphones are built to not do that, not to lose volume so much over such a short distance.  They maintain the volume even two feet away.  Those other mics were built with the goal of being able to be used for two people interviews, for example.  Both people can talk and use the same mic.  But for podcasting, where we’re only one person, we benefit from a dramatic dropoff of sensitivity over a short distance.  When we podcast, the other sounds that are two feet away from us are our desk creaking, our chair squeaking, and our keyboard’s clickety clacking.  There are no sounds two feet from us that we want to have the same volume as our voice.  Those other sounds being reduced by 18 dB because of their distance is a huge advantage when podcasting, especially in our homes which are less sound-treated than a professional studio.  The dropoff in volume also reduces reverb from smooth walls.  So that is why the Behringer XM8500, with its dramatic dropoff over distance, which could be considered a huge disadvantage in other settings, is the mic that I would personally choose over a $60 or $100 mic every time, specifically for our home studio podcasting purposes.  Yes, the other mics are more expensive, and yes, they are more sensitive, which can lure a person psychologically into thinking they will be easier to use.  But the more expensive mics’ design to be more sensitive at further distances makes it harder to podcast using them, because you’ll have louder reverb, louder keyboard clacks, louder chair and desk squeaks, louder dog barks, etc. Those other mics do work just fine though, and a lot of other models do have great dropoff over distance, the Behringer XM8500 isn’t the only one. This is just a recommendation that I am typing up after a new member told me that they purchased a more expensive microphone on purpose trying to get a better experience, but their reverb on smooth untreated walls was really loud and they needed to add something squishy (foam, etc) on their wall when they joined us. They might not have needed to take that extra effort to sound treat their wall if their more expensive mic wasn’t so good at picking up sound six feet away (three feet to wall, three feet back to mic) at the same volume as their voice right next to the microphone. Whenever one of us goes through a preventable difficulty, I try to share my advice to make future members’ experience smoother and easier. </p>
@@ -558,27 +717,3 @@ Before talking about equipment, let’s talk about acceptance:  We will not reje
 </main>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
