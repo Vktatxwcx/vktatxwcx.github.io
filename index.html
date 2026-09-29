@@ -116,104 +116,322 @@ details.nav-subsection > summary:hover {
     padding-bottom: 0.5rem;
 }
 
+.content-section {
+    display: none;
+}
+
+.content-section.visible {
+    display: block;
+}
+
+.navigation-page {
+    display: none;
+}
+
+.navigation-page.visible {
+    display: block;
+}
+
+.page-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.75rem 0;
+    padding: 1rem 1.25rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    color: #0066cc;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.page-button:hover {
+    background: #f0f0f0;
+    text-decoration: underline;
+}
+
+.back-button {
+    margin-top: 2rem;
+}
+
+.back-button button {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #0066cc;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.back-button button:hover {
+    text-decoration: underline;
+}
+
+
 </style>
 </head>
 
 <body id="top">
 <main>
 
-<p>
+<p id="introduction">
 Welcome to the official website of Firebreathing Kittens Podcast! The following answers some questions frequently asked by new members. It is divided into sections to make it easier to look at.
 </p>
 
 <nav id="main-navigation" aria-label="Main navigation">
 
-    <details class="nav-section">
-        <summary>Scheduling</summary>
+    <!-- ================================
+         HOME
+         ================================ -->
 
-        <div class="nav-subsection">
-            <a href="#a5">Game Playtime Length</a>
-            <a href="#a9">Scheduling</a>
-            <a href="#a10">Example Game Calendar</a>
-            <a href="#a8">Player-Character Level Progression</a>
-            <a href="#a3">How Long We Have Been Playing</a>
+    <div id="nav-home" class="navigation-page visible">
+
+        <button class="page-button" onclick="showPage('nav-scheduling')">
+            Scheduling
+        </button>
+
+        <button class="page-button" onclick="showPage('nav-game-format')">
+            Game Format
+        </button>
+
+        <button class="page-button" onclick="showPage('nav-podcasting')">
+            Podcasting
+        </button>
+
+        <button class="page-button" onclick="showPage('nav-joining')">
+            Joining
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a21')">
+            Equipment
+        </button>
+
+    </div>
+
+
+    <!-- ================================
+         SCHEDULING
+         ================================ -->
+
+    <div id="nav-scheduling" class="navigation-page">
+
+        <button class="page-button" onclick="showPage('content-a5')">
+            Game Playtime Length
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a9')">
+            Scheduling
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a10')">
+            Example Game Calendar
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a8')">
+            Player-Character Level Progression
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a3')">
+            How Long We Have Been Playing
+        </button>
+
+        <div class="back-button">
+            <button onclick="showPage('nav-home')">
+                ← Back
+            </button>
         </div>
-    </details>
+
+    </div>
 
 
-    <details class="nav-section">
-        <summary>Game Format</summary>
+    <!-- ================================
+         GAME FORMAT
+         ================================ -->
 
-        <details class="nav-subsection">
-            <summary>TTRPG Systems</summary>
+    <div id="nav-game-format" class="navigation-page">
 
-            <div class="nav-subsection nested">
-                <a href="#a6">TTRPG Systems</a>
-                <a href="#a7">Flavor vs Mechanics</a>
-                <a href="#a15">Safety System</a>
-            </div>
-        </details>
+        <button class="page-button" onclick="showPage('nav-ttrpg-systems')">
+            TTRPG Systems
+        </button>
 
-        <details class="nav-subsection">
-            <summary>Rotation GMing</summary>
+        <button class="page-button" onclick="showPage('nav-rotation-gming')">
+            Rotation GMing
+        </button>
 
-            <div class="nav-subsection nested">
-                <a href="#a11">Our Members Are Welcome to GM</a>
-            </div>
-        </details>
+        <button class="page-button" onclick="showPage('nav-virtual-tabletop')">
+            Virtual Tabletop
+        </button>
 
-        <details class="nav-subsection">
-            <summary>Virtual Tabletop</summary>
+        <button class="page-button" onclick="showPage('nav-the-campaign')">
+            The Campaign
+        </button>
 
-            <div class="nav-subsection nested">
-                <a href="#a4">How do you “play”? (Roll20, Foundry, etc visual combat maps?)</a>
-            </div>
-        </details>
-
-        <details class="nav-subsection">
-            <summary>The Campaign</summary>
-
-            <div class="nav-subsection nested">
-                <a href="#a12">Modules? Magazines? Where the stories come from</a>
-                <a href="#a13">Standalone Plot And Long Form Storytelling</a>
-                <a href="#a14">Example of how we use each others’ Non Player Characters (NPCs) in games:</a>
-            </div>
-        </details>
-
-    </details>
-
-
-    <details class="nav-section">
-        <summary>Podcasting</summary>
-
-        <div class="nav-subsection">
-            <a href="#a1">Podcast Name</a>
-            <a href="#a2">Theme</a>
-            <a href="#a16">NSFW (or SFW)</a>
-            <a href="#a18">Improvisational Comedy</a>
-            <a href="#a17">Accents</a>
+        <div class="back-button">
+            <button onclick="showPage('nav-home')">
+                ← Back
+            </button>
         </div>
-    </details>
+
+    </div>
 
 
-    <details class="nav-section">
-        <summary>Joining</summary>
+    <!-- ================================
+         TTRPG SYSTEMS
+         ================================ -->
 
-        <div class="nav-subsection">
-            <a href="#a19">How Long Do I Have to Decide If I Want To Play?</a>
-            <a href="#a20">Duration</a>
-            <a href="#a22">How to Join</a>
+    <div id="nav-ttrpg-systems" class="navigation-page">
+
+        <button class="page-button" onclick="showPage('content-a6')">
+            TTRPG Systems
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a7')">
+            Flavor vs Mechanics
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a15')">
+            Safety System
+        </button>
+
+        <div class="back-button">
+            <button onclick="showPage('nav-game-format')">
+                ← Back
+            </button>
         </div>
-    </details>
+
+    </div>
 
 
-    <details class="nav-section">
-        <summary>Equipment</summary>
+    <!-- ================================
+         ROTATION GMING
+         ================================ -->
 
-        <div class="nav-subsection">
-            <a href="#a21">Equipment</a>
+    <div id="nav-rotation-gming" class="navigation-page">
+
+        <button class="page-button" onclick="showPage('content-a11')">
+            Our Members Are Welcome To GM
+        </button>
+
+        <div class="back-button">
+            <button onclick="showPage('nav-game-format')">
+                ← Back
+            </button>
         </div>
-    </details>
+
+    </div>
+
+
+    <!-- ================================
+         VIRTUAL TABLETOP
+         ================================ -->
+
+    <div id="nav-virtual-tabletop" class="navigation-page">
+
+        <button class="page-button" onclick="showPage('content-a4')">
+            How Do You “Play”? (Roll20, Foundry, etc?)
+        </button>
+
+        <div class="back-button">
+            <button onclick="showPage('nav-game-format')">
+                ← Back
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         THE CAMPAIGN
+         ================================ -->
+
+    <div id="nav-the-campaign" class="navigation-page">
+
+        <button class="page-button" onclick="showPage('content-a12')">
+            Modules? Magazines? Where the stories come from
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a13')">
+            Standalone Plot And Long Form Storytelling
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a14')">
+            Example of How We Use Each Others’ Non Player Characters
+        </button>
+
+        <div class="back-button">
+            <button onclick="showPage('nav-game-format')">
+                ← Back
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         PODCASTING
+         ================================ -->
+
+    <div id="nav-podcasting" class="navigation-page">
+
+        <button class="page-button" onclick="showPage('content-a1')">
+            Podcast Name
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a2')">
+            Theme
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a16')">
+            NSFW or SFW
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a18')">
+            Improvisatonal Comedy (Improv)
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a17')">
+            Accents
+        </button>
+
+        <div class="back-button">
+            <button onclick="showPage('nav-home')">
+                ← Back
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         JOINING
+         ================================ -->
+
+    <div id="nav-joining" class="navigation-page">
+
+        <button class="page-button" onclick="showPage('content-a19')">
+            How Long Do I Have to Decide If I Want To Play?
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a20')">
+            Duration
+        </button>
+
+        <button class="page-button" onclick="showPage('content-a22')">
+            How To Join
+        </button>
+
+        <div class="back-button">
+            <button onclick="showPage('nav-home')">
+                ← Back
+            </button>
+        </div>
+
+    </div>
 
 </nav>
 
@@ -715,5 +933,93 @@ Before talking about equipment, let’s talk about acceptance:  We will not reje
 </p>
 
 </main>
+
+<script>
+function showPage(pageId) {
+
+    /*
+     * Hide every navigation page.
+     */
+    document.querySelectorAll('.navigation-page').forEach(function(page) {
+        page.classList.remove('visible');
+    });
+
+    /*
+     * Hide every piece of article content.
+     */
+    document.querySelectorAll('.content-section').forEach(function(section) {
+        section.classList.remove('visible');
+    });
+
+const introduction = document.getElementById('introduction');
+
+if (introduction) {
+    introduction.style.display =
+        pageId === 'nav-home' ? 'block' : 'none';
+}
+
+    /*
+     * Show the requested page.
+     */
+    const page = document.getElementById(pageId);
+
+    if (page) {
+        page.classList.add('visible');
+    }
+
+    /*
+     * Put the visitor at the top of the page.
+     */
+    window.scrollTo(0, 0);
+}
+
+
+/*
+ * Turn each existing H2 section into a hideable section.
+ *
+ * We don't have to manually modify all of your existing
+ * paragraphs. This script finds each H2 and groups everything
+ * belonging to it until the next H2.
+ */
+document.addEventListener('DOMContentLoaded', function() {
+
+    const main = document.querySelector('main');
+
+    if (!main) {
+        return;
+    }
+
+    const headings = Array.from(main.querySelectorAll('h2[id]'));
+
+    headings.forEach(function(heading) {
+
+        const section = document.createElement('section');
+
+        section.className = 'content-section';
+        section.id = 'content-' + heading.id;
+
+        heading.parentNode.insertBefore(section, heading);
+
+        let current = heading;
+
+        while (current) {
+
+            const next = current.nextElementSibling;
+
+            section.appendChild(current);
+
+            if (!next || next.tagName.toLowerCase() === 'h2') {
+                break;
+            }
+
+            current = next;
+        }
+
+    });
+
+});
+</script>
+
+
 </body>
 </html>
