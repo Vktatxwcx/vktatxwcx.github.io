@@ -50,6 +50,31 @@ a {
     color: #0066cc;
 }
 
+.power-table {
+    width: 100%;
+    max-width: 450px;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.power-table th,
+.power-table td {
+    padding: 0.4rem 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.power-table th {
+    font-weight: 700;
+    background: #f5f5f5;
+}
+
+.power-table th:last-child,
+.power-table td:last-child {
+    text-align: right;
+    width: 110px;
+}
+
 
 /* ================================
    CLICKABLE NAVIGATION
@@ -647,31 +672,40 @@ How do we play the same characters if we’re changing systems all the time?  We
 <p>
 We play the same character for the whole campaign. Which week it is in our real life year determines the character's power level. The characters are low power in the start of the season and maximum power by the end. </p>
 
-<p>Air Date..........Power Level</p>
-<p>January 2026...........0%</p>
-<p>February 2026..........0%</p>
-<p>March 2026.............5%</p>
-<p>April 2026.............5%</p>
-<p>May 2026..............10%</p>
-<p>June 2026.............10%</p>
-<p>July 2026.............20%</p>
-<p>August 2026...........20%</p>
-<p>September 2026........30%</p>
-<p>October 2026..........30%</p>
-<p>November 2026.........40%</p>
-<p>December 2026.........40%</p>
-<p>January 2027..........50%</p>
-<p>February 2027.........50%</p>
-<p>March 2027............60%</p>
-<p>April 2027............60%</p>
-<p>May 2027..............70%</p>
-<p>June 2027.............70%</p>
-<p>July 2027.............80%</p>
-<p>August 2027...........80%</p>
-<p>September 2027........90%</p>
-<p>October 2027..........90%</p>
-<p>November 2027........100%</p>
-<p>December 2027........100%</p>
+<table class="power-table">
+    <thead>
+        <tr>
+            <th>Air Date</th>
+            <th>Power Level</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>January 2026</td><td>0%</td></tr>
+        <tr><td>February 2026</td><td>0%</td></tr>
+        <tr><td>March 2026</td><td>5%</td></tr>
+        <tr><td>April 2026</td><td>5%</td></tr>
+        <tr><td>May 2026</td><td>10%</td></tr>
+        <tr><td>June 2026</td><td>10%</td></tr>
+        <tr><td>July 2026</td><td>20%</td></tr>
+        <tr><td>August 2026</td><td>20%</td></tr>
+        <tr><td>September 2026</td><td>30%</td></tr>
+        <tr><td>October 2026</td><td>30%</td></tr>
+        <tr><td>November 2026</td><td>40%</td></tr>
+        <tr><td>December 2026</td><td>40%</td></tr>
+        <tr><td>January 2027</td><td>50%</td></tr>
+        <tr><td>February 2027</td><td>50%</td></tr>
+        <tr><td>March 2027</td><td>60%</td></tr>
+        <tr><td>April 2027</td><td>60%</td></tr>
+        <tr><td>May 2027</td><td>70%</td></tr>
+        <tr><td>June 2027</td><td>70%</td></tr>
+        <tr><td>July 2027</td><td>80%</td></tr>
+        <tr><td>August 2027</td><td>80%</td></tr>
+        <tr><td>September 2027</td><td>90%</td></tr>
+        <tr><td>October 2027</td><td>90%</td></tr>
+        <tr><td>November 2027</td><td>100%</td></tr>
+        <tr><td>December 2027</td><td>100%</td></tr>
+    </tbody>
+</table>
 
 <p>Epilogues: At the end of the season, each player is welcome to record an epilogue for their character.  We compile the epilogues into the last episode that airs at the end of each season.  Then we create new characters for the next season.
 </p>
